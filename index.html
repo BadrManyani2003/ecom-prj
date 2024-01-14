@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecom-prj</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="header flex">
+      <h1 class="logo">
+        <a href="#">Ecom-prj</a>
+      </h1>
+      <nav class="navbar">
+        <a href="#hero">Home</a>
+        <a href="#newProducts">New Products</a>
+        <a href="#allProducts">All Products</a>
+        <a href="#contactUs">Contact Us</a>
+      </nav>
+    </header>
+
+    <div class="shopping-cart closed">
+      <h1>Shopping Cart :</h1>
+      <div class="list-cart"></div>
+      <div class="cart-total">Total: $<span id="totalAmount">0.00</span></div>
+      <div class="btn">
+        <button onclick="closeCart()" class="close" id="closeBtn">Close</button>
+        <button onclick="openCheckout()" class="check-out">Check Out</button>
+      </div>
+    </div>
+
+    <div class="hero" id="hero">
+      <div>
+        <h1>Welcome to Ecom-prj</h1>
+        <p>Your one-stop shop for amazing products.</p>
+        <a href="#allProducts" class="explore-btn">Explore All Products</a>
+      </div>
+    </div>
+
+    <section class="section" id="newProducts">
+      <h1>New Products :</h1>
+      <div class="products" id="newProductsContainer"></div>
+    </section>
+
+    <section class="section" id="allProducts">
+      <h1>
+        All Products :
+        <div class="cart-counter flex">
+          <i class="bx bxs-cart"></i>
+          <span id="cartCounter">0</span>
+        </div>
+      </h1>
+      <div class="products" id="productContainer"></div>
+    </section>
+
+    <section class="section" id="contactUs">
+      <h1>Contact Us :</h1>
+      <div class="contact">
+        <form class="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+    <div class="checkout-section closed" id="checkoutSection">
+      <div class="checkout">
+        <h1>Checkout</h1>
+        <div class="checkout-content">
+          <div class="cart-total">Total: $<span id="total">0.00</span></div>
+          <div class="checkout-buttons">
+            <button class="return-back" onclick="closeCheckout()">
+              Return Back
+            </button>
+            <button class="Purchase" onclick="purchase()">Purchase</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>&copy; 2024 Ecom-prj. All rights reserved.</p>
+      <p>E-commerce website created by <a href="#">Badr Manyani</a></p>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
